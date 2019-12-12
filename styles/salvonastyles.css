@@ -58,7 +58,7 @@ button {
 a:hover,
 a:focus,
 a:active {
-    transform: scale(2.03);
+    transform: scale(1.03);
 }
 button:hover,
 button:focus,
