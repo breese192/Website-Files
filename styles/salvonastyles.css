@@ -167,7 +167,7 @@ button:active {
 
 
 html {
-	font-size: 1.04rem;
+	
 	}
 
 
@@ -349,7 +349,7 @@ body {
 	color: #4e4e4e;
 }
 
-#salvona-homepage img {
+#salvona-homepage img, #salvona-about-page img {
 	width: 100%;
 	height: auto;
 	margin-bottom: 12px;
