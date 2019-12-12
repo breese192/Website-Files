@@ -36,7 +36,6 @@ h6 {
 
 
 a {
-    display: inline-block;
     vertical-align: middle;
     transform: translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
