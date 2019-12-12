@@ -73,33 +73,102 @@ h6 {
 	font-size: 1rem;
 }
 
+.row {
+	margin-bottom: .5em;
+}
+
+.hr-nav {
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+h1, h2, h3, h4, h5 {
+	padding: 0;
+}
+
+a {
+	color: var(--color-salvona-secondary);
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
 
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
 /*mobile*/
-@media screen and (max-width: 800px){
-	
-	.pid-text {
-		float: left!important;
-		margin-right:auto;
-		font-weight: 500;
-		font-size: 1.8em;
-		color: #b5b5b5;
+	@media screen and (max-width: 800px){
+		
+		.pid-text {
+			float: left!important;
+			margin-right:auto;
+			font-weight: 500;
+			font-size: 1.8em;
+			color: #b5b5b5;
+		}
+		
 	}
-	
+/*mobile end*/
+
+p, li, a, .btn, th, tbody, label, div.label, .package-title, .posted_in {
+	font-size:1.3rem;
+	line-height: 1.5;
+}
+.pid-text {
+	font-size: 1.5rem;
+}
+.woocommerce-variation-price {
+  font-weight: 600;
+  font-size: 1.8rem;
+	padding-bottom: 1rem;
+}
+td.value, select.form-control, footer p, footer a  {
+	font-size: 1.2rem;
+	line-height: 1.5;
 }
 
-
+/*INCI typography*/
+.woocommerce-variation-description p
+{
+	font-size: .8rem;
+}
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
-	
-@media screen and (min-width: 1200px){
-	.container {
-		max-width: 1200px;
+
+/*mobile elements*/
+	@media screen and (min-width: 1200px){
+		.container {
+			max-width: 1200px;
+		}
 	}
-}
+/*end mobile elements*/
+	
+/*salvona buttons*/
+	.salvona-btn:hover {
+		color: #f1f1f1;
+		background-color: var(--color-salvona-secondary-btn-bg-hover);
+		border-color: var(--color-salvona-secondary-btn-bg);
+		border-radius: 5px;
+	}
+	.salvona-btn:focus , .salvona-btn:active  {
+		filter: opacity(50%);
+		background-color: var(--color-salvona-secondary-btn-bg-hover)!important;
+	}
+	.salvona-btn {
+		font-size: 1.2rem;
+		text-decoration:none!important;
+		color:#FFF;
+		background-color: var(--color-salvona-secondary-btn-bg);
+		border-color: var(--color-salvona-secondary-btn-bg-hover);
+		border-radius: 5px;
+		margin-top: .4em;
+		padding: .3rem;
+	}
+/*salvona buttons end*/
 
 /*--------------------------------------------------------------
 # Navigation
@@ -193,16 +262,44 @@ input::-webkit-input-placeholder {
 }
 
 
-/*--------*/
-a {
-    vertical-align: middle;
-    transform: translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    backface-visibility: hidden;
-    -moz-osx-font-smoothing: grayscale;
-    transition-duration: 0.3s;
-    transition-property: transform;
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+footer {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	background: url("/~salvona2/images/DotsBackgroundGrey.svg") no-repeat center center scroll; 
+	background-color: #4a72ae;
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
 }
+
+
+.social-icons, .footer-thumb, div.col.salvona-logo-thumbnail {
+
+}
+footer i {
+	font-size: 2.75em;
+	color: #99979c;
+	margin-left: 1rem;;
+	margin-top: -.3rem;
+}
+
+.footer-thumb img {
+	width: 90%;
+	height: 100%;
+	 -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+	
+}
+
+
+
+/*--------*/
+
 button {
     display: inline-block;
     vertical-align: middle;
