@@ -1,17 +1,59 @@
-/* 
-Version: 1.1
-*/
-
-
 @charset "UTF-8";
-/* CSS Document */
-
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap');
+/* CSS Document */
+/*Version: 1.22*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Content
+	## Posts and pages
+	## Comments
+# Media
+	## Captions
+	## Galleries
+# Woocommerce
+# Footer
+--------------------------------------------------------------*/
 
+/*--------------------------------------------------------------
+# Root settings and Variables
+--------------------------------------------------------------*/
 :root {
 	font-size: 16px;
+	/*HSL color values for computing colorschemes*/
+	--salvona-primary-h: 213;
+	--salvona-primary-s: 35%;
+	--salvona-primary-l: 47%;
+		--color-salvona-primary: hsl(var(--salvona-primary-h), var(--salvona-primary-s), var(--salvona-primary-l));
+		--color-salvona-btn-bg: var(--color-salvona-primary);
+		--color-salvona-btn-bg-hover: hsl(var(--salvona-primary-h), var(--salvona-primary-s), calc(var(--salvona-primary-l) * .9));
+		--color-salvona-btn-fg: #FFF;
+		--color-salvona-btn-fg-hover: #FFF;
+	
+	--salvona-secondary-h: 35.2;
+	--salvona-secondary-s: 100%;
+	--salvona-secondary-l: 44.1%;
+		--color-salvona-secondary: hsl(var(--salvona-secondary-h), var(--salvona-secondary-s), var(--salvona-secondary-l));
+		--color-salvona-secondary-btn-bg: var(--color-salvona-secondary);
+		--color-salvona-secondary-btn-bg-hover: hsl(var(--salvona-secondary-h), var(--salvona-secondary-s), calc(var(--salvona-secondary-l) * .9));
+		--color-salvona-secondary-btn-fg: #FFF;
+		--color-salvona-secondary-btn-fg-hover: #FFF;
 }
 
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
 h1 {
 	font-size: 2.5rem;
 }
@@ -32,9 +74,126 @@ h6 {
 }
 
 
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+/*mobile*/
+@media screen and (max-width: 800px){
+	
+	.pid-text {
+		float: left!important;
+		margin-right:auto;
+		font-weight: 500;
+		font-size: 1.8em;
+		color: #b5b5b5;
+	}
+	
+}
 
 
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+	
+@media screen and (min-width: 1200px){
+	.container {
+		max-width: 1200px;
+	}
+}
 
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+
+header#masthead { 
+	background-color: #FFF;
+}
+
+h1, h2, h3 {
+	color: #4F75A3;
+}
+
+.dropdown-menu > li > a {
+	color: #4F75A3;
+	
+}
+.dropdown-menu {
+	border-radius: 0px;
+	border-top: 2px solid #4F75A3;
+}
+
+#salvona-search input[type=search] {
+	width: 15px;
+	padding-left: 10px;
+	color: transparent;
+	cursor: pointer;
+}
+#salvona-search input[type=search]:hover {
+	background-color: #fff;
+}
+#salvona-search input[type=search]:focus {
+	width: 130px;
+	padding-left: 32px;
+	color: #000;
+	background-color: #fff;
+	cursor: auto;
+}
+#salvona-search input:-moz-placeholder {
+	color: transparent;
+}
+#salvona-search input::-webkit-input-placeholder {
+	color: transparent;
+}
+
+input {
+	outline: none;
+}
+input[type=search] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-family: inherit;
+	font-size: 100%;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+	display: none; 
+}
+
+
+input[type=search] {
+	background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+	border: solid 1px #ccc;
+	padding: 9px 10px 9px 32px;
+	width: 55px;
+	
+	-webkit-border-radius: 10em;
+	-moz-border-radius: 10em;
+	border-radius: 10em;
+	
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+}
+input[type=search]:focus {
+	width: 130px;
+	background-color: #fff;
+	border-color: #66CC75;
+	
+	-webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	-moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	box-shadow: 0 0 5px rgba(109,207,246,.5);
+}
+
+
+input:-moz-placeholder {
+	color: #999;
+}
+input::-webkit-input-placeholder {
+	color: #999;
+}
+
+
+/*--------*/
 a {
     vertical-align: middle;
     transform: translateZ(0);
