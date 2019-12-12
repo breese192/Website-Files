@@ -348,7 +348,9 @@ body {
 	font-weight: 400;
 	color: #4e4e4e;
 }
-
+img {
+	height: auto;
+}
 #salvona-homepage img, #salvona-about-page img {
 	width: 100%;
 	height: auto;
