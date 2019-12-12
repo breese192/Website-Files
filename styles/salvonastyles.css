@@ -1,17 +1,59 @@
-/* 
-Version: 1.1
-*/
-
-
 @charset "UTF-8";
-/* CSS Document */
-
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap');
+/* CSS Document */
+/*Version: 1.22*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Content
+	## Posts and pages
+	## Comments
+# Media
+	## Captions
+	## Galleries
+# Woocommerce
+# Footer
+--------------------------------------------------------------*/
 
+/*--------------------------------------------------------------
+# Root settings and Variables
+--------------------------------------------------------------*/
 :root {
 	font-size: 16px;
+	/*HSL color values for computing colorschemes*/
+	--salvona-primary-h: 213;
+	--salvona-primary-s: 35%;
+	--salvona-primary-l: 47%;
+		--color-salvona-primary: hsl(var(--salvona-primary-h), var(--salvona-primary-s), var(--salvona-primary-l));
+		--color-salvona-btn-bg: var(--color-salvona-primary);
+		--color-salvona-btn-bg-hover: hsl(var(--salvona-primary-h), var(--salvona-primary-s), calc(var(--salvona-primary-l) * .9));
+		--color-salvona-btn-fg: #FFF;
+		--color-salvona-btn-fg-hover: #FFF;
+	
+	--salvona-secondary-h: 35.2;
+	--salvona-secondary-s: 100%;
+	--salvona-secondary-l: 44.1%;
+		--color-salvona-secondary: hsl(var(--salvona-secondary-h), var(--salvona-secondary-s), var(--salvona-secondary-l));
+		--color-salvona-secondary-btn-bg: var(--color-salvona-secondary);
+		--color-salvona-secondary-btn-bg-hover: hsl(var(--salvona-secondary-h), var(--salvona-secondary-s), calc(var(--salvona-secondary-l) * .9));
+		--color-salvona-secondary-btn-fg: #FFF;
+		--color-salvona-secondary-btn-fg-hover: #FFF;
 }
 
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
 h1 {
 	font-size: 2.5rem;
 }
@@ -31,12 +73,20 @@ h6 {
 	font-size: 1rem;
 }
 
+.row {
+	margin-bottom: .5em;
+}
 
-
-
+.hr-nav {
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+h1, h2, h3, h4, h5 {
+	padding: 0;
+}
 
 a {
-    display: inline-block;
+	color: var(--color-salvona-secondary);
     vertical-align: middle;
     transform: translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
@@ -45,6 +95,211 @@ a {
     transition-duration: 0.3s;
     transition-property: transform;
 }
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+/*mobile*/
+	@media screen and (max-width: 800px){
+		
+		.pid-text {
+			float: left!important;
+			margin-right:auto;
+			font-weight: 500;
+			font-size: 1.8em;
+			color: #b5b5b5;
+		}
+		
+	}
+/*mobile end*/
+
+p, li, a, .btn, th, tbody, label, div.label, .package-title, .posted_in {
+	font-size:1.3rem;
+	line-height: 1.5;
+}
+.pid-text {
+	font-size: 1.5rem;
+}
+.woocommerce-variation-price {
+  font-weight: 600;
+  font-size: 1.8rem;
+	padding-bottom: 1rem;
+}
+td.value, select.form-control, footer p, footer a  {
+	font-size: 1.2rem;
+	line-height: 1.5;
+}
+
+/*INCI typography*/
+.woocommerce-variation-description p
+{
+	font-size: .8rem;
+}
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+
+/*mobile elements*/
+	@media screen and (min-width: 1200px){
+		.container {
+			max-width: 1200px;
+		}
+	}
+/*end mobile elements*/
+	
+/*salvona buttons*/
+	.salvona-btn:hover {
+		color: #f1f1f1;
+		background-color: var(--color-salvona-secondary-btn-bg-hover);
+		border-color: var(--color-salvona-secondary-btn-bg);
+		border-radius: 5px;
+	}
+	.salvona-btn:focus , .salvona-btn:active  {
+		filter: opacity(50%);
+		background-color: var(--color-salvona-secondary-btn-bg-hover)!important;
+	}
+	.salvona-btn {
+		font-size: 1.2rem;
+		text-decoration:none!important;
+		color:#FFF;
+		background-color: var(--color-salvona-secondary-btn-bg);
+		border-color: var(--color-salvona-secondary-btn-bg-hover);
+		border-radius: 5px;
+		margin-top: .4em;
+		padding: .3rem;
+	}
+/*salvona buttons end*/
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+
+header#masthead { 
+	background-color: #FFF;
+}
+
+h1, h2, h3 {
+	color: #4F75A3;
+}
+
+.dropdown-menu > li > a {
+	color: #4F75A3;
+	
+}
+.dropdown-menu {
+	border-radius: 0px;
+	border-top: 2px solid #4F75A3;
+}
+
+#salvona-search input[type=search] {
+	width: 15px;
+	padding-left: 10px;
+	color: transparent;
+	cursor: pointer;
+}
+#salvona-search input[type=search]:hover {
+	background-color: #fff;
+}
+#salvona-search input[type=search]:focus {
+	width: 130px;
+	padding-left: 32px;
+	color: #000;
+	background-color: #fff;
+	cursor: auto;
+}
+#salvona-search input:-moz-placeholder {
+	color: transparent;
+}
+#salvona-search input::-webkit-input-placeholder {
+	color: transparent;
+}
+
+input {
+	outline: none;
+}
+input[type=search] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-family: inherit;
+	font-size: 100%;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+	display: none; 
+}
+
+
+input[type=search] {
+	background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+	border: solid 1px #ccc;
+	padding: 9px 10px 9px 32px;
+	width: 55px;
+	
+	-webkit-border-radius: 10em;
+	-moz-border-radius: 10em;
+	border-radius: 10em;
+	
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+}
+input[type=search]:focus {
+	width: 130px;
+	background-color: #fff;
+	border-color: #66CC75;
+	
+	-webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	-moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	box-shadow: 0 0 5px rgba(109,207,246,.5);
+}
+
+
+input:-moz-placeholder {
+	color: #999;
+}
+input::-webkit-input-placeholder {
+	color: #999;
+}
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+footer {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	background: url("/~salvona2/images/DotsBackgroundGrey.svg") no-repeat center center scroll; 
+	background-color: #4a72ae;
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+
+.social-icons, .footer-thumb, div.col.salvona-logo-thumbnail {
+
+}
+footer i {
+	font-size: 2.75em;
+	color: #99979c;
+	margin-left: 1rem;;
+	margin-top: -.3rem;
+}
+
+.footer-thumb img {
+	width: 90%;
+	height: 100%;
+	 -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+	
+}
+
+
+
+/*--------*/
+
 button {
     display: inline-block;
     vertical-align: middle;
@@ -167,7 +422,7 @@ button:active {
 
 
 html {
-	font-size: 1.04rem;
+	
 	}
 
 
@@ -348,8 +603,10 @@ body {
 	font-weight: 400;
 	color: #4e4e4e;
 }
-
-#salvona-homepage img {
+img {
+	height: auto;
+}
+#salvona-homepage img, #salvona-about-page img {
 	width: 100%;
 	height: auto;
 	margin-bottom: 12px;
