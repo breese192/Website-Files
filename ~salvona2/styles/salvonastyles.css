@@ -919,14 +919,20 @@ h3 {
 	margin-top: -.5rem;
 	vertical-align: center!important;
 }
-.product-title-row, .woocommerce-tabs, hr {
+.product-title-row, hr {
 	padding: 1em 0;
 	padding-top: 3%;
 }
 
-.product-title-row, .woocommerce-tabs, hr{
-	padding: 1em 0;
+.product-title-row {
+	padding-bottom: 5%
 }
+
+.woocommerce-tabs {
+	padding: 1em 0;
+	padding-top: 5%;
+}
+
 .meta-row .col{
 	padding-top: 3em;
 	padding-left: 0;
