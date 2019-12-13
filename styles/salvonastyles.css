@@ -114,8 +114,8 @@ a {
 /*mobile end*/
 
 p, li, a, .btn, th, tbody, label, div.label, .package-title, .posted_in {
-	font-size:1.3rem;
-	line-height: 1.5;
+	font-size:1.3rem!important;
+	line-height: 1.5!important;
 }
 .pid-text {
 	font-size: 1.5rem;
