@@ -895,7 +895,7 @@ div.product_meta {
 }
 /* Hide wordpress header */
 header {
-	display:none;
+	display:none!important;
 }
 #primary {
 	padding:0;
@@ -909,19 +909,19 @@ header {
 	margin-top: -1.5em;
 }
 
-
-/*NAVIGATION*/
-.buy-now-button {
-	background-color: var(--color-salvona-secondary-btn-bg);
-	border-color: var(--color-salvona-secondary-btn-bg-hover);
-}
-
 header#masthead {
 	box-shadow: none;
 	border-bottom: 2px solid rgba(0, 0, 0, 0.1) ;
 }
 
-.buy-now-button:hover{
+/*NAVIGATION*/
+.btn.btn-primary.buy-now-button {
+	background-color: var(--color-salvona-secondary-btn-bg);
+	border-color: var(--color-salvona-secondary-btn-bg-hover);
+}
+
+
+.btn.btn-primary.buy-now-button:hover{
 	background-color: var(--color-salvona-secondary-btn-bg-hover);
 }
 
@@ -997,7 +997,7 @@ padding-right: 0px;
 	vertical-align: baseline;
 }
 
-input {
+input.input-text.qty {
 	margin-top: 9px;
 	height: 42px;
 }
