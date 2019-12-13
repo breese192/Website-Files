@@ -345,8 +345,8 @@ input::-webkit-input-placeholder {
 	@media only screen and (max-width: 768px) {
 		footer#colophon .form-inline label, footer#colophon .form-inline input.form-control {
 			margin-bottom: 1em;
-			margin-right: 0rem;
-			padding-right: 0em;
+			margin-right: 0rem!important;
+			padding-right: 0em!important;
 		}
 		footer img {
 			margin-left: 4em;
