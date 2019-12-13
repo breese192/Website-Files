@@ -345,8 +345,8 @@ input::-webkit-input-placeholder {
 	@media only screen and (max-width: 768px) {
 		footer#colophon .form-inline label, footer#colophon .form-inline input.form-control {
 			margin-bottom: 1em;
-			margin-right: 0rem!important;
-			padding-right: 0em!important;
+			margin-right: 0rem;
+			padding-right: 0em;
 		}
 	}
 /*Responsive elements end*/
@@ -363,8 +363,8 @@ footer {
 }
 
 footer#colophon .form-inline label, footer#colophon .form-inline input.form-control {
-	margin-right: 2rem!important;
-	padding-right: 1em!important;
+	margin-right: 2rem;
+	padding-right: 1em;
 }
 
 body:not(.theme-preset-active) footer#colophon {
