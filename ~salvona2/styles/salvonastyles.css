@@ -531,12 +531,12 @@ footer i {
 
 
 .homepagemarquee {
-	background-color: var(--color-salvona-element-background);
+	background-color: var(--color-salvona-element-bg);
 	padding-top: 10%;
 	padding-bottom: 10%;
 }
 .homepagemarqueemobile {
-	background-color: var(--color-salvona-element-background);
+	background-color: var(--color-salvona-element-bg);
 	padding-top: 10%;
 	padding-bottom: 10%;
 }
@@ -552,7 +552,7 @@ footer i {
 
 
 .marquee {
-	background-color: var(--color-salvona-element-background);
+	background-color: var(--color-salvona-element-bg);
 	padding-top: 6%;
 	padding-bottom: 6%;
 }
@@ -610,7 +610,7 @@ footer i {
 @media only screen and (max-width: 800px) {
 .homepagemarquee {
 	background: url("../backgrounds/blank.gif") no-repeat center center scroll; 
-	background-color: var(--color-salvona-element-background);
+	background-color: var(--color-salvona-element-bg);
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
@@ -742,7 +742,7 @@ sub, sup {
 	width: 100%;
 }
 .formulationtable tr:first-child td{
-	background-color: var(--color-salvona-element-background);
+	background-color: var(--color-salvona-element-bg);
 	color: #FFF;
 	border: 1px solid #555;
 }
@@ -792,7 +792,7 @@ sub, sup {
 	width: 100%;
 }
 .versiontable tr:first-child td{
-	background-color: var(--color-salvona-element-background);
+	background-color: var(--color-salvona-element-bg);
 	color: #FFF;
 	border: 1px solid #555;
 	font-weight: bold;
@@ -838,7 +838,7 @@ hr.tighter {
 }
 .btn-primary.focus, .btn-primary:focus {
 	color: #fff;
-	background-color: var(--color-salvona-element-background);
+	background-color: var(--color-salvona-element-bg);
 	border-color: #e18400;
 	box-shadow:0 0 0 .2rem rgba(150,150,150,.5)
 }
