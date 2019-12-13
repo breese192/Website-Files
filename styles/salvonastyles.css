@@ -642,9 +642,9 @@ h5, h6 {
 
 p {
 	font-family: 'Roboto', sans-serif;
-	margin-bottom: 8px;
+	margin-bottom: .5em!important;
 	line-height: 1.6em;
-	margin-top: 8px;
+	margin-top: .5em!important;
 }
 ul,ol {
 	font-family: 'Roboto', sans-serif;
