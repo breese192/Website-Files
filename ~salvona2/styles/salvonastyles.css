@@ -343,7 +343,7 @@ input::-webkit-input-placeholder {
 
 /*Responsive elements*/
 	@media only screen and (min-width: 768px) {
-		.form-inline label, .form-inline input.form-control {
+		footer .form-inline label, footer .form-inline input.form-control {
 			margin-bottom: 1em;
 		}
 	}
@@ -360,13 +360,18 @@ footer {
   	background-size: cover;
 }
 
-
-.social-icons, .footer-thumb, div.col.salvona-logo-thumbnail {
-
+footer .form-inline label, footer .form-inline input.form-control {
+	margin-right: 2rem!important;
+	padding-right: 1em!important;
 }
+
+body:not(.theme-preset-active) footer#colophon {
+	color: #666;
+	
+}
+
 footer i {
 	font-size: 2.75em;
-	color: #99979c;
 	margin-left: 1rem;;
 	margin-top: -.3rem;
 }
