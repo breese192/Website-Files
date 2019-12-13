@@ -229,12 +229,25 @@ td.value, select.form-control, footer p, footer a  {
 --------------------------------------------------------------*/
 
 /*SALVONA LOGO */
-	.salvona-logo img {
+	a.salvona-logo img {
 		max-width: 364px;
 		margin: 1em 0;
 }
 /*SALVONA LOGO END */
 
+/*Salvona Search Bar*/
+	.input-group {
+		font-size: 1.2rem;
+}
+	.input-group input {
+			font-size: 1.2rem;
+	}
+
+	.input-group button {
+		background-color: #FFF;
+		border: none;
+}
+/*Salvona Search Bar End*/
 
 header#masthead { 
 	background-color: #FFF;
@@ -331,7 +344,6 @@ input::-webkit-input-placeholder {
 footer {
 	padding-top: 3rem;
 	padding-bottom: 3rem;
-	background: url("/~salvona2/images/DotsBackgroundGrey.svg") no-repeat center center scroll; 
 	background-color: #4a72ae;
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
