@@ -348,6 +348,9 @@ input::-webkit-input-placeholder {
 			margin-right: 0rem;
 			padding-right: 0em;
 		}
+		footer img {
+			margin-left: 4em;
+		}
 	}
 /*Responsive elements end*/
 
