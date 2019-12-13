@@ -360,6 +360,7 @@ footer {
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
+	filter: grayscale(1);
 }
 
 footer#colophon .form-inline label, footer#colophon .form-inline input.form-control {
