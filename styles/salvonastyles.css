@@ -164,6 +164,10 @@ td.value, select.form-control, footer p, footer a  {
 		text-decoration: none;
 		transform: scale(1.03);
 	}
+	
+	a:not(.salvona-logo) {
+	display:inline-block;
+	}
 /*end global link settings*/
 
 /*mobile elements*/
@@ -223,6 +227,14 @@ td.value, select.form-control, footer p, footer a  {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
+
+/*SALVONA LOGO */
+	.salvona-logo img {
+		max-width: 364px;
+		margin: 1em 0;
+}
+/*SALVONA LOGO END */
+
 
 header#masthead { 
 	background-color: #FFF;
