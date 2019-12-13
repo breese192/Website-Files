@@ -165,7 +165,7 @@ td.value, select.form-control, footer p, footer a  {
 		transform: scale(1.03);
 	}
 	
-	a:not(.salvona-logo), a:not(.dropdown-item) {
+	a:not(.salvona-logo):not(.dropdown-item) {
 	display:inline-block;
 	}
 /*end global link settings*/
