@@ -48,6 +48,11 @@
 		--color-salvona-secondary-btn-bg-hover: hsl(var(--salvona-secondary-h), var(--salvona-secondary-s), calc(var(--salvona-secondary-l) * .9));
 		--color-salvona-secondary-btn-fg: #FFF;
 		--color-salvona-secondary-btn-fg-hover: #FFF;
+
+	--color-salvona-main-bg: #FFF;
+	--color-salvona-main-text: #4a72ae;
+		--color-salvona-element-bg: var(--color-salvona-main-text);
+	--color-salvona-gray-text: #b5b5b5;
 }
 
 
@@ -85,16 +90,12 @@ h1, h2, h3, h4, h5 {
 	padding: 0;
 }
 
-a {
-	color: var(--color-salvona-secondary);
-    vertical-align: middle;
-    transform: translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    backface-visibility: hidden;
-    -moz-osx-font-smoothing: grayscale;
-    transition-duration: 0.3s;
-    transition-property: transform;
+
+
+html {
+  scroll-behavior: smooth;
 }
+
 
 /*--------------------------------------------------------------
 # Typography
@@ -107,11 +108,17 @@ a {
 			margin-right:auto;
 			font-weight: 500;
 			font-size: 1.8em;
-			color: #b5b5b5;
 		}
 		
 	}
 /*mobile end*/
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	color: var(--color-salvona-main-text);
+	line-height: 1.1;
+}
 
 p, li, a, .btn, th, tbody, label, div.label, .package-title, .posted_in {
 	font-size:1.3rem!important;
@@ -138,6 +145,24 @@ td.value, select.form-control, footer p, footer a  {
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
+/*Global Link settings*/
+	a {
+		color: var(--color-salvona-secondary);
+		vertical-align: middle;
+		transform: translateZ(0);
+		box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+		backface-visibility: hidden;
+		-moz-osx-font-smoothing: grayscale;
+		transition-duration: 0.3s;
+		transition-property: transform;
+	}
+	
+	a:hover,
+	a:focus,
+	a:active {
+		transform: scale(1.03);
+	}
+/*end global link settings*/
 
 /*mobile elements*/
 	@media screen and (min-width: 1200px){
@@ -167,7 +192,30 @@ td.value, select.form-control, footer p, footer a  {
 		border-radius: 5px;
 		margin-top: .4em;
 		padding: .5rem;
+	}	
+	.btn.btn-primary.buy-now-button {
+	background-color: var(--color-salvona-secondary-btn-bg);
+	border-color: var(--color-salvona-secondary-btn-bg-hover);
+}
+	.btn.btn-primary.buy-now-button:hover{
+	background-color: var(--color-salvona-secondary-btn-bg-hover);
+}
+	button {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}	
+	button:hover,
+	button:focus,
+	button:active {
+		transform: scale(1.03);
 	}
+
 /*salvona buttons end*/
 
 /*--------------------------------------------------------------
@@ -300,26 +348,6 @@ footer i {
 
 /*--------*/
 
-button {
-    display: inline-block;
-    vertical-align: middle;
-    transform: translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    backface-visibility: hidden;
-    -moz-osx-font-smoothing: grayscale;
-    transition-duration: 0.3s;
-    transition-property: transform;
-}
-a:hover,
-a:focus,
-a:active {
-    transform: scale(1.03);
-}
-button:hover,
-button:focus,
-button:active {
-    transform: scale(1.03);
-}
 
 
 
@@ -418,14 +446,6 @@ button:active {
 .eventcard h3 {
 	min-height:105px;
 	}
-	
-
-
-html {
-	
-	}
-
-
 
 .darkblue i {
 	margin-right:20px;
@@ -490,9 +510,6 @@ html {
 
 
 
-html {
-  scroll-behavior: smooth;
-}
 
 
 
@@ -500,12 +517,12 @@ html {
 
 
 .homepagemarquee {
-	background-color: #4a72ae;
+	background-color: var(--color-salvona-element-background);
 	padding-top: 10%;
 	padding-bottom: 10%;
 }
 .homepagemarqueemobile {
-	background-color: #4a72ae;
+	background-color: var(--color-salvona-element-background);
 	padding-top: 10%;
 	padding-bottom: 10%;
 }
@@ -521,7 +538,7 @@ html {
 
 
 .marquee {
-	background-color: #4a72ae;
+	background-color: var(--color-salvona-element-background);
 	padding-top: 6%;
 	padding-bottom: 6%;
 }
@@ -579,7 +596,7 @@ html {
 @media only screen and (max-width: 800px) {
 .homepagemarquee {
 	background: url("../backgrounds/blank.gif") no-repeat center center scroll; 
-	background-color: #4a72ae;
+	background-color: var(--color-salvona-element-background);
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
@@ -611,12 +628,7 @@ img {
 	width: 100%;
 	}
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'Roboto', sans-serif;
-	font-weight: 500;
-	color: #4a72ae;
-	line-height: 1.1;
-}
+
 
 h1, h2, h3, h4 {
 	margin-top: 5px;
@@ -716,7 +728,7 @@ sub, sup {
 	width: 100%;
 }
 .formulationtable tr:first-child td{
-	background-color: #4a72ae;
+	background-color: var(--color-salvona-element-background);
 	color: #FFF;
 	border: 1px solid #555;
 }
@@ -766,7 +778,7 @@ sub, sup {
 	width: 100%;
 }
 .versiontable tr:first-child td{
-	background-color: #4a72ae;
+	background-color: var(--color-salvona-element-background);
 	color: #FFF;
 	border: 1px solid #555;
 	font-weight: bold;
@@ -812,7 +824,7 @@ hr.tighter {
 }
 .btn-primary.focus, .btn-primary:focus {
 	color: #fff;
-	background-color: #4a72ae;
+	background-color: var(--color-salvona-element-background);
 	border-color: #e18400;
 	box-shadow:0 0 0 .2rem rgba(150,150,150,.5)
 }
@@ -903,16 +915,7 @@ header#masthead {
 	border-bottom: 2px solid rgba(0, 0, 0, 0.1) ;
 }
 
-/*NAVIGATION*/
-.btn.btn-primary.buy-now-button {
-	background-color: var(--color-salvona-secondary-btn-bg);
-	border-color: var(--color-salvona-secondary-btn-bg-hover);
-}
 
-
-.btn.btn-primary.buy-now-button:hover{
-	background-color: var(--color-salvona-secondary-btn-bg-hover);
-}
 
 /*HOMEPAGE*/
 
