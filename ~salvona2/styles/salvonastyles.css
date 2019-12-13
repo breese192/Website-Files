@@ -342,7 +342,7 @@ input::-webkit-input-placeholder {
 --------------------------------------------------------------*/
 
 /*Responsive elements*/
-	@media only screen and (min-width: 768px) {
+	@media only screen and (max-width: 768px) {
 		footer .form-inline label, footer .form-inline input.form-control {
 			margin-bottom: 1em;
 		}
