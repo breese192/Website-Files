@@ -161,6 +161,7 @@ td.value, select.form-control, footer p, footer a  {
 	a:focus,
 	a:active {
 		color: var(--color-salvona-primary);
+		text-decoration: none;
 		transform: scale(1.03);
 	}
 /*end global link settings*/
