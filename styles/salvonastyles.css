@@ -753,6 +753,7 @@ sub, sup {
 .technicaltable td:nth-child(1) {
 	background-color: #e8e9f3;
 	border: 1px solid #999999;
+		font-weight: 500;
 }
 .technicaltable tr:first-child p {
 	color: #FFF;
@@ -851,5 +852,263 @@ hr.tighter {
 	}
 }
 		
+	/*unsorted from customize*/	
 		
-		
+h3 {
+	padding: 1rem 0px
+}
+.product_title{
+	padding: .5em 0em;
+	font-size: 30pt!important;
+}
+
+
+.salvona-search-form i{
+	padding-top: .7rem;
+	margin-right: -.5rem;
+}
+.salvona-search-form {
+	margin-top: -.5rem;
+	vertical-align: center!important;
+}
+.product-title-row, .woocommerce-tabs, hr {
+	padding: 1em 0;
+	padding-top: 3%;
+}
+
+.product-title-row, .woocommerce-tabs, hr{
+	padding: 1em 0;
+}
+.meta-row .col{
+	padding-top: 3em;
+	padding-left: 0;
+}
+div.product_meta {
+	float: left;
+}
+
+.dev-warning {
+	font-size: 12pt;
+	font-weight: bold;
+	text-transform: capitalize;
+	color: red;
+}
+/* Hide wordpress header */
+header {
+	display:none;
+}
+#primary {
+	padding:0;
+	margin:0;
+}
+.entry-title {
+	display:none;
+}
+.site-content {
+	padding:0px!important;
+	margin-top: -1.5em;
+}
+
+
+/*NAVIGATION*/
+.buy-now-button {
+	background-color: var(--color-salvona-secondary-btn-bg);
+	border-color: var(--color-salvona-secondary-btn-bg-hover);
+}
+
+header#masthead {
+	box-shadow: none;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.1) ;
+}
+
+.buy-now-button:hover{
+	background-color: var(--color-salvona-secondary-btn-bg-hover);
+}
+
+/*HOMEPAGE*/
+
+
+/*PRODUCT PAGE*/
+
+/*category tags*/
+
+div.meta-row div {
+	display: inline;
+}
+
+.meta-row{
+	padding-top: 1em;
+}
+
+div#product-image {
+	padding-top: 1rem;
+	padding-right: 0;
+	margin-left: -30px;	
+}
+.product-thumbs- img{
+	padding: .5rem;
+	border: 1px #f1f1f1 solid;
+}
+
+div.product-image-gallery {
+	border: 1px #F1F1F1 solid;
+	padding: 1rem;
+}
+
+.product_title.entry-title {
+	color: #000!important;
+	border-bottom:none;
+	display:inline;
+}
+.salvona-product-pid {
+	padding-left: 0;
+}
+.pid-text {
+	float: right;
+  margin-left: auto;
+  color: #b5b5b5;
+  margin-top: 9px;
+}
+
+.salvona-product-tagline h2{
+	margin-top: -.5em;
+	margin-bottom: .2em;
+	padding-top: .7em;
+padding-bottom: 6px;
+padding-left: 0px;
+padding-right: 0px;
+}
+
+.product-tag {
+	width:100%;
+}
+
+
+
+.salvona-variation-table > div.value {
+		width: 40%;	
+}
+.salvona-variation-table > div {
+	font-weight: bold;
+	padding: 0 .3em;
+}
+
+.label, .data, .quantity-select {
+	vertical-align: baseline;
+}
+
+input {
+	margin-top: 9px;
+	height: 42px;
+}
+
+.product-title-row {
+	border-bottom: 3px var(--color-salvona-primary) solid;
+}
+
+
+.nav-pills .nav-item:not(.active) .nav-link {
+    background-color: rgba(0,0,0,0);
+    color: var(--color-salvona-primary);;
+}
+.nav-pills .nav-item.active .nav-link{
+    background-color:  var(--color-salvona-primary);
+    color: white;
+}
+
+/**********************************************************************************************************************/
+
+.product-image-gallery {
+  background-color: #fefefe;
+  padding: 1.5rem;
+}
+
+.pdp-product-image {
+  margin-bottom: 20px;
+}
+
+.product-thumbs a {
+  margin-left: 8px;
+  margin-right: 8px;
+  padding: 0 !important;
+}
+
+.product-thumbs a img {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  border: solid 4px #fefefe;
+  border-radius: 0;
+  box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2);
+  line-height: 0;
+  border-radius: 3px;
+  width: 50px;
+  height: 50px;
+  border: none;
+}
+
+div.ml-3 {
+	text-align:center;
+}
+.wpdm-download-link {
+	background-color: var(--color-salvona-secondary-btn-bg);
+	border-color: var(--color-salvona-secondary-btn-bg-hover);
+}
+.wpdm-download-link:hover {
+	background-color: var(--color-salvona-secondary-btn-bg-hover);
+}
+.link-template-default {
+	border: none;
+}
+.mr-3, .text-muted {
+	display:none;
+}
+.media {
+	display:block;
+	text-align:left;
+	border-left: 3px var(--color-salvona-primary) solid;
+	padding-left: 1rem;
+}
+.package-title a{
+	pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: black;
+}
+
+.buy-now-button.btn-cart {
+	clear:both;
+	margin: 1em;
+	width: 50%;
+}
+
+.woocommerce-variation-add-to-cart {
+	text-align: center;	
+}
+
+.woocommerce-Price-amount.amount {
+	color: #900f0f;
+}
+
+.wc-tabs {
+	display: flex;
+}
+.nav.nav-pills.mb-3.wc-tabs {
+color: var(--color-salvona-primary);
+text-align: left;
+font-family: 'Roboto', sans-serif;
+box-sizing: border-box;
+box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.1);
+border-top-width: 1px;
+border-bottom-width: 1px;
+border-top-style: solid;
+border-bottom-style: solid;
+border-top-color: #FFFFFF;
+border-bottom-color: #FFFFFF;
+position: relative;
+display: flex;
+align-items: center;
+padding: .5rem 1rem;
+background-color: #fff!important;
+}
+
