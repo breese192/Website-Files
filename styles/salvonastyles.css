@@ -1050,20 +1050,20 @@ input.input-text.qty {
 div.ml-3 {
 	text-align:center;
 }
-.wpdm-download-link {
+.wpdm-download-link.btn.btn-primary {
 	background-color: var(--color-salvona-secondary-btn-bg);
 	border-color: var(--color-salvona-secondary-btn-bg-hover);
 }
-.wpdm-download-link:hover {
+.wpdm-download-link.btn.btn-primary:hover, .wpdm-download-link.btn.btn-primary:active  {
 	background-color: var(--color-salvona-secondary-btn-bg-hover);
 }
-.link-template-default {
+.link-template-default.card.mb-2 {
 	border: none;
 }
 .mr-3, .text-muted {
 	display:none;
 }
-.media {
+div.card-body div.media {
 	display:block;
 	text-align:left;
 	border-left: 3px var(--color-salvona-primary) solid;
