@@ -343,7 +343,7 @@ input::-webkit-input-placeholder {
 
 /*Responsive elements*/
 	@media only screen and (max-width: 768px) {
-		footer .form-inline label, footer .form-inline input.form-control {
+		footer#colophon .form-inline label, footer#colophon .form-inline input.form-control {
 			margin-bottom: 1em;
 			margin-right: 0rem!important;
 			padding-right: 0em!important;
@@ -362,7 +362,7 @@ footer {
   	background-size: cover;
 }
 
-footer .form-inline label, footer .form-inline input.form-control {
+footer#colophon .form-inline label, footer#colophon .form-inline input.form-control {
 	margin-right: 2rem!important;
 	padding-right: 1em!important;
 }
