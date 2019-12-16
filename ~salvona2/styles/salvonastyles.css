@@ -1105,7 +1105,7 @@ div.ml-3 {
 .link-template-default.card.mb-2 {
 	border: none;
 }
-.mr-3, .text-muted {
+ .text-muted {
 	display:none;
 }
 div.card-body div.media {
