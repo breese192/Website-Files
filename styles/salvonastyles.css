@@ -526,6 +526,9 @@ html {
 	padding-top: 0%;
 	padding-bottom: 0%;
 }
+.homepagemarqueemobile img {
+	margin-bottom: 0px;
+}
 .homepagemarquee p, .homepagemarquee h1, .homepagemarquee h2, .homepagemarquee h3,.homepagemarquee h4, .homepagemarquee h5 {
 	color: #ffffff;
 	text-align: left;
