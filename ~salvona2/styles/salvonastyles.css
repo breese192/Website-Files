@@ -659,7 +659,7 @@ body {
 img {
 	height: auto;
 }
-#salvona-homepage img, #salvona-about-page img {
+#salvona-homepage img, #salvona-about-page img, .salvona-page img {
 	width: 100%;
 	height: auto;
 	margin-bottom: 12px;
