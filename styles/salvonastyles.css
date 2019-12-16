@@ -414,9 +414,26 @@ button:active {
 	border-radius: 10px;
 	margin-bottom:10%;
 	}
+	
+.eventcard {
+	background-color:#ececec;
+	padding-bottom:10%;
+	padding-top:10%;
+	padding-right:7%;
+	padding-left:7%;
+	border-radius: 10px;
+	margin-bottom:10%;
+	}
 	 
 .eventcard h3 {
 	min-height:105px;
+	}
+	
+
+@media only screen and (max-width: 768px) {	
+.eventcard h3 {
+	min-height:150px;
+	}
 	}
 	
 
@@ -506,8 +523,8 @@ html {
 }
 .homepagemarqueemobile {
 	background-color: #4a72ae;
-	padding-top: 10%;
-	padding-bottom: 10%;
+	padding-top: 0%;
+	padding-bottom: 0%;
 }
 .homepagemarquee p, .homepagemarquee h1, .homepagemarquee h2, .homepagemarquee h3,.homepagemarquee h4, .homepagemarquee h5 {
 	color: #ffffff;
@@ -566,13 +583,7 @@ html {
   	background-size: cover;
 	}
 	
-.homepagemarqueemobile {
-	background: url("../backgrounds/HomepageImage.webp") no-repeat center center scroll; 
-  	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-  	background-size: cover;
-	}
+
 
 
 
