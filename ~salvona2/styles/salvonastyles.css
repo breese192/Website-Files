@@ -137,6 +137,7 @@ h1, h2, h3, h4, h5, h6 {
 p, li, a, .btn, th, tbody, label, div.label, .package-title, .posted_in {
 	font-size:1.3rem!important;
 	line-height: 1.5!important;
+}
 
 p, li, a, .btn, th, tbody, label, div.label, .package-title, .posted_in {
 	font-size:1.3rem;
@@ -385,7 +386,8 @@ footer {
 	background: url("/~salvona2/images/DotsBackgroundGrey.svg") no-repeat center center scroll;
 	padding-top: 3rem;
 	padding-bottom: 3rem;
-
+	}
+	
 footer {
 	padding-top: 3rem;
 	padding-bottom: 3rem;
@@ -408,7 +410,6 @@ body:not(.theme-preset-active) footer#colophon {
 	
 }
 
-}
 
 
 .social-icons, .footer-thumb, div.col.salvona-logo-thumbnail {
@@ -663,7 +664,7 @@ html {
 
 	background-color: var(--color-salvona-element-bg);
 	padding-top: 10%;
-	padding-bottom: 10%;
+	padding-bottom: 10%;}
 
 .homepagemarqueemobile img {
 	margin-bottom: 0px;
@@ -1280,5 +1281,3 @@ align-items: center;
 padding: .5rem 1rem;
 background-color: #fff!important;
 }
-
-
