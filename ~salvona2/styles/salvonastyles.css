@@ -1281,3 +1281,32 @@ align-items: center;
 padding: .5rem 1rem;
 background-color: #fff!important;
 }
+
+#salvona-distributor-page .card {
+	text-align:center;
+	}
+	
+#salvona-distributor-page .btn-link {
+	color: #0056b3;
+    text-transform: uppercase;
+	font-weight: 600;
+	}
+	
+#salvona-distributor-page .card hr {
+	margin-top: 15%;
+    margin-bottom: 15%;
+    border-top: 1px solid #ddd; 
+	}
+
+#salvona-distributor-page .card h2 {	
+	color: #999999;
+	}
+	
+#salvona-distributor-page .card a {
+	text-decoration: underline;
+	}
+	
+#salvona-distributor-page .card p {
+    margin-bottom: 9%;
+	line-height: 1.7rem;
+	}
