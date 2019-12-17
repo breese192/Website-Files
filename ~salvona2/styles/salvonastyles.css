@@ -3,7 +3,7 @@
 /* CSS Document */
 /*Version: 1.22*/
 /*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
+TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Normalize
 # Typography
@@ -29,7 +29,8 @@
 # Root settings and Variables
 --------------------------------------------------------------*/
 :root {
-	font-size: 16px;
+
+	font-size: 15px;
 	/*HSL color values for computing colorschemes*/
 	--salvona-primary-h: 213;
 	--salvona-primary-s: 35%;
@@ -48,6 +49,11 @@
 		--color-salvona-secondary-btn-bg-hover: hsl(var(--salvona-secondary-h), var(--salvona-secondary-s), calc(var(--salvona-secondary-l) * .9));
 		--color-salvona-secondary-btn-fg: #FFF;
 		--color-salvona-secondary-btn-fg-hover: #FFF;
+
+	--color-salvona-main-bg: #FFF;
+	--color-salvona-main-text: #4a72ae;
+		--color-salvona-element-bg: var(--color-salvona-main-text);
+	--color-salvona-gray-text: #b5b5b5;
 }
 
 
@@ -85,6 +91,12 @@ h1, h2, h3, h4, h5 {
 	padding: 0;
 }
 
+
+html {
+  scroll-behavior: smooth;
+}
+
+
 a {
 	color: var(--color-salvona-secondary);
     vertical-align: middle;
@@ -95,6 +107,7 @@ a {
     transition-duration: 0.3s;
     transition-property: transform;
 }
+
 
 /*--------------------------------------------------------------
 # Typography
@@ -113,9 +126,22 @@ a {
 	}
 /*mobile end*/
 
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	color: var(--color-salvona-main-text);
+	line-height: 1.1;
+}
+
+p, li, a, .btn, th, tbody, label, div.label, .package-title, .posted_in {
+	font-size:1.3rem!important;
+	line-height: 1.5!important;
+
 p, li, a, .btn, th, tbody, label, div.label, .package-title, .posted_in {
 	font-size:1.3rem;
 	line-height: 1.5;
+
 }
 .pid-text {
 	font-size: 1.5rem;
@@ -139,7 +165,36 @@ td.value, select.form-control, footer p, footer a  {
 # Elements
 --------------------------------------------------------------*/
 
+/*Global Link settings*/
+	a {
+		color: var(--color-salvona-primary);
+		vertical-align: middle;
+		transform: translateZ(0);
+		box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+		backface-visibility: hidden;
+		-moz-osx-font-smoothing: grayscale;
+		transition-duration: 0.3s;
+		transition-property: transform;
+	}
+	
+	a:hover,
+	a:focus,
+	a:active {
+		color: var(--color-salvona-primary);
+		text-decoration: none;
+		transform: scale(1.03);
+	}
+	
+	a:not(.salvona-logo):not(.dropdown-item) {
+	display:inline-block;
+	}
+/*end global link settings*/
+
+/*Responsive elements*/
+
+
 /*mobile elements*/
+
 	@media screen and (min-width: 1200px){
 		.container {
 			max-width: 1200px;
@@ -166,13 +221,60 @@ td.value, select.form-control, footer p, footer a  {
 		border-color: var(--color-salvona-secondary-btn-bg-hover);
 		border-radius: 5px;
 		margin-top: .4em;
-		padding: .3rem;
+
+		padding: .5rem;
+	}	
+	.btn.btn-primary.buy-now-button {
+	background-color: var(--color-salvona-secondary-btn-bg);
+	border-color: var(--color-salvona-secondary-btn-bg-hover);
+}
+	.btn.btn-primary.buy-now-button:hover{
+	background-color: var(--color-salvona-secondary-btn-bg-hover);
+}
+	button {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}	
+	button:hover,
+	button:focus,
+	button:active {
+		transform: scale(1.03);
 	}
+
 /*salvona buttons end*/
 
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
+
+
+/*SALVONA LOGO */
+	a.salvona-logo img {
+		max-width: 364px;
+		margin: 1em 0;
+}
+/*SALVONA LOGO END */
+
+/*Salvona Search Bar*/
+	.input-group {
+		font-size: 1.2rem;
+}
+	.input-group input {
+			font-size: 1.2rem;
+	}
+
+	.input-group button {
+		background-color: #FFF;
+		border: none;
+}
+/*Salvona Search Bar End*/
+
 
 header#masthead { 
 	background-color: #FFF;
@@ -266,6 +368,24 @@ input::-webkit-input-placeholder {
 # Footer
 --------------------------------------------------------------*/
 
+/*Responsive elements*/
+	@media only screen and (max-width: 686px) {
+		footer#colophon .form-inline label, footer#colophon .form-inline input.form-control {
+			margin-bottom: 1em;
+			margin-right: 0rem!important;
+			padding-right: 0em!important;
+		}
+		footer img {
+			margin-left: 4em;
+		}
+	}
+/*Responsive elements end*/
+
+footer {
+	background: url("/~salvona2/images/DotsBackgroundGrey.svg") no-repeat center center scroll;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+
 footer {
 	padding-top: 3rem;
 	padding-bottom: 3rem;
@@ -275,12 +395,26 @@ footer {
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
+	filter: grayscale(1);
+}
+
+footer#colophon .form-inline label, footer#colophon .form-inline input.form-control {
+	margin-right: 2rem;
+	padding-right: 1em;
+}
+
+body:not(.theme-preset-active) footer#colophon {
+	color: #666;
+	
+}
+
 }
 
 
 .social-icons, .footer-thumb, div.col.salvona-logo-thumbnail {
 
 }
+
 footer i {
 	font-size: 2.75em;
 	color: #99979c;
@@ -299,6 +433,7 @@ footer i {
 
 
 /*--------*/
+
 
 button {
     display: inline-block;
@@ -320,6 +455,7 @@ button:focus,
 button:active {
     transform: scale(1.03);
 }
+
 
 
 
@@ -414,6 +550,7 @@ button:active {
 	border-radius: 10px;
 	margin-bottom:10%;
 	}
+
 	
 .eventcard {
 	background-color:#ececec;
@@ -424,11 +561,11 @@ button:active {
 	border-radius: 10px;
 	margin-bottom:10%;
 	}
-	 
+
 .eventcard h3 {
 	min-height:105px;
 	}
-	
+
 
 @media only screen and (max-width: 768px) {	
 .eventcard h3 {
@@ -506,7 +643,6 @@ html {
 
 
 
-
 html {
   scroll-behavior: smooth;
 }
@@ -516,16 +652,19 @@ html {
 
 
 
+
 .homepagemarquee {
-	background-color: #4a72ae;
+
+	background-color: var(--color-salvona-element-bg);
 	padding-top: 10%;
 	padding-bottom: 10%;
 }
 .homepagemarqueemobile {
-	background-color: #4a72ae;
-	padding-top: 0%;
-	padding-bottom: 0%;
-}
+
+	background-color: var(--color-salvona-element-bg);
+	padding-top: 10%;
+	padding-bottom: 10%;
+
 .homepagemarqueemobile img {
 	margin-bottom: 0px;
 }
@@ -541,7 +680,7 @@ html {
 
 
 .marquee {
-	background-color: #4a72ae;
+	background-color: var(--color-salvona-element-bg);
 	padding-top: 6%;
 	padding-bottom: 6%;
 }
@@ -550,7 +689,7 @@ html {
 	text-align: center;
 } 
 .marquee h1 {
-	font-size: 3.5em;
+	font-size: 3.7em;
 	}
 
 
@@ -586,6 +725,13 @@ html {
   	background-size: cover;
 	}
 	
+.homepagemarqueemobile {
+	background: url("../backgrounds/HomepageImage.webp") no-repeat center center scroll; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	}
 
 
 
@@ -593,7 +739,8 @@ html {
 @media only screen and (max-width: 800px) {
 .homepagemarquee {
 	background: url("../backgrounds/blank.gif") no-repeat center center scroll; 
-	background-color: #4a72ae;
+	background-color: var(--color-salvona-element-bg);
+
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
@@ -601,9 +748,8 @@ html {
 	}
 	}
 
-	
-	
-	
+
+
 	
 a:hover {
 	color:#4a72ae;
@@ -611,6 +757,7 @@ a:hover {
 a {
 	color:#4a72ae;
 	}
+
 	
 body {
 	font-family: 'Roboto', sans-serif;
@@ -620,7 +767,9 @@ body {
 img {
 	height: auto;
 }
-#salvona-homepage img, #salvona-about-page img {
+
+#salvona-homepage img, #salvona-about-page img, .salvona-page img {
+
 	width: 100%;
 	height: auto;
 	margin-bottom: 12px;
@@ -636,12 +785,14 @@ img {
 	width: 100%;
 	}
 
+
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 500;
 	color: #4a72ae;
 	line-height: 1.1;
 }
+
 
 h1, h2, h3, h4 {
 	margin-top: 5px;
@@ -656,9 +807,11 @@ h5, h6 {
 
 p {
 	font-family: 'Roboto', sans-serif;
-	margin-bottom: 8px;
+
+	margin-bottom: .5em!important;
 	line-height: 1.6em;
-	margin-top: 8px;
+	margin-top: .5em!important;
+
 }
 ul,ol {
 	font-family: 'Roboto', sans-serif;
@@ -741,7 +894,8 @@ sub, sup {
 	width: 100%;
 }
 .formulationtable tr:first-child td{
-	background-color: #4a72ae;
+	background-color: var(--color-salvona-element-bg);
+
 	color: #FFF;
 	border: 1px solid #555;
 }
@@ -767,6 +921,8 @@ sub, sup {
 .technicaltable td:nth-child(1) {
 	background-color: #e8e9f3;
 	border: 1px solid #999999;
+		font-weight: 500;
+
 }
 .technicaltable tr:first-child p {
 	color: #FFF;
@@ -790,7 +946,9 @@ sub, sup {
 	width: 100%;
 }
 .versiontable tr:first-child td{
-	background-color: #4a72ae;
+
+	background-color: var(--color-salvona-element-bg);
+
 	color: #FFF;
 	border: 1px solid #555;
 	font-weight: bold;
@@ -836,7 +994,7 @@ hr.tighter {
 }
 .btn-primary.focus, .btn-primary:focus {
 	color: #fff;
-	background-color: #4a72ae;
+	background-color: var(--color-salvona-element-bg);
 	border-color: #e18400;
 	box-shadow:0 0 0 .2rem rgba(150,150,150,.5)
 }
@@ -865,5 +1023,262 @@ hr.tighter {
 	}
 }
 		
+
+	/*unsorted from customize*/	
 		
-		
+h3 {
+	padding: 1rem 0px
+}
+.product_title{
+	padding: .5em 0em;
+	font-size: 30pt!important;
+}
+
+
+.salvona-search-form i{
+	padding-top: .7rem;
+	margin-right: -.5rem;
+}
+.salvona-search-form {
+	margin-top: -.5rem;
+	vertical-align: center!important;
+}
+.product-title-row, hr {
+	padding: 1em 0;
+	padding-top: 3%;
+}
+
+#product-image.row {
+	padding-top: 5%
+}
+
+.woocommerce-tabs {
+	padding: 1em 0;
+	padding-top: 5%;
+}
+
+.meta-row .col{
+	padding-top: 3em;
+	padding-left: 0;
+}
+div.product_meta {
+	float: left;
+}
+
+.dev-warning {
+	font-size: 12pt;
+	font-weight: bold;
+	text-transform: capitalize;
+	color: red;
+}
+/* Hide wordpress header */
+header {
+	display:none!important;
+}
+#primary {
+	padding:0;
+	margin:0;
+}
+.entry-title {
+	display:none;
+}
+.site-content {
+	padding:0px!important;
+	margin-top: -1.5em;
+}
+
+header#masthead {
+	box-shadow: none;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.1) ;
+}
+
+
+
+/*HOMEPAGE*/
+
+
+/*PRODUCT PAGE*/
+
+/*category tags*/
+
+div.meta-row div {
+	display: inline;
+}
+
+.meta-row{
+	padding-top: 1em;
+}
+
+div#product-image {
+	padding-top: 1rem;
+	padding-right: 0;
+	margin-left: -30px;	
+}
+.product-thumbs- img{
+	padding: .5rem;
+	border: 1px #f1f1f1 solid;
+}
+
+div.product-image-gallery {
+	border: 1px #F1F1F1 solid;
+	padding: 1rem;
+}
+
+.product_title.entry-title {
+	color: #000!important;
+	border-bottom:none;
+	display:inline;
+}
+.salvona-product-pid {
+	padding-left: 0;
+}
+.pid-text {
+	float: right;
+  margin-left: auto;
+  color: #b5b5b5;
+  margin-top: 9px;
+}
+
+.salvona-product-tagline h2{
+	margin-top: -.5em;
+	margin-bottom: .2em;
+	padding-top: .7em;
+padding-bottom: 6px;
+padding-left: 0px;
+padding-right: 0px;
+}
+
+.product-tag {
+	width:100%;
+}
+
+
+
+.salvona-variation-table > div.value {
+		width: 40%;	
+}
+.salvona-variation-table > div {
+	font-weight: bold;
+	padding: 0 .3em;
+}
+
+.label, .data, .quantity-select {
+	vertical-align: baseline;
+}
+
+input.input-text.qty {
+	margin-top: 9px;
+	height: 42px;
+}
+
+.product-title-row {
+	border-bottom: 3px var(--color-salvona-primary) solid;
+}
+
+
+.nav-pills .nav-item:not(.active) .nav-link {
+    background-color: rgba(0,0,0,0);
+    color: var(--color-salvona-primary);;
+}
+.nav-pills .nav-item.active .nav-link{
+    background-color:  var(--color-salvona-primary);
+    color: white;
+}
+
+/**********************************************************************************************************************/
+
+.product-image-gallery {
+  background-color: #fefefe;
+  padding: 1.5rem;
+}
+
+.pdp-product-image {
+  margin-bottom: 20px;
+}
+
+.product-thumbs a {
+  margin-left: 8px;
+  margin-right: 8px;
+  padding: 0 !important;
+}
+
+.product-thumbs a img {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  border: solid 4px #fefefe;
+  border-radius: 0;
+  box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2);
+  line-height: 0;
+  border-radius: 3px;
+  width: 50px;
+  height: 50px;
+  border: none;
+}
+
+div.ml-3 {
+	text-align:center;
+}
+.wpdm-download-link.btn.btn-primary {
+	background-color: var(--color-salvona-secondary-btn-bg);
+	border-color: var(--color-salvona-secondary-btn-bg-hover);
+}
+.wpdm-download-link.btn.btn-primary:hover, .wpdm-download-link.btn.btn-primary:active  {
+	background-color: var(--color-salvona-secondary-btn-bg-hover);
+}
+.link-template-default.card.mb-2 {
+	border: none;
+}
+ .text-muted {
+	display:none;
+}
+div.card-body div.media {
+	display:block;
+	text-align:left;
+	border-left: 3px var(--color-salvona-primary) solid;
+	padding-left: 1rem;
+}
+.package-title a{
+	pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: black;
+}
+
+.buy-now-button.btn-cart {
+	clear:both;
+	margin: 1em;
+	width: 50%;
+}
+
+.woocommerce-variation-add-to-cart {
+	text-align: center;	
+}
+
+.woocommerce-Price-amount.amount {
+	color: #900f0f;
+}
+
+.wc-tabs {
+	display: flex;
+}
+.nav.nav-pills.mb-3.wc-tabs {
+color: var(--color-salvona-primary);
+text-align: left;
+font-family: 'Roboto', sans-serif;
+box-sizing: border-box;
+box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.1);
+border-top-width: 1px;
+border-bottom-width: 1px;
+border-top-style: solid;
+border-bottom-style: solid;
+border-top-color: #FFFFFF;
+border-bottom-color: #FFFFFF;
+position: relative;
+display: flex;
+align-items: center;
+padding: .5rem 1rem;
+background-color: #fff!important;
+}
+
+
