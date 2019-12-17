@@ -3,7 +3,7 @@
 /* CSS Document */
 /*Version: 1.22*/
 /*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
+TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Normalize
 # Typography
@@ -29,6 +29,7 @@
 # Root settings and Variables
 --------------------------------------------------------------*/
 :root {
+
 	font-size: 15px;
 	/*HSL color values for computing colorschemes*/
 	--salvona-primary-h: 213;
@@ -91,9 +92,20 @@ h1, h2, h3, h4, h5 {
 }
 
 
-
 html {
   scroll-behavior: smooth;
+}
+
+
+a {
+	color: var(--color-salvona-secondary);
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
 }
 
 
@@ -108,10 +120,12 @@ html {
 			margin-right:auto;
 			font-weight: 500;
 			font-size: 1.8em;
+			color: #b5b5b5;
 		}
 		
 	}
 /*mobile end*/
+
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Roboto', sans-serif;
@@ -123,6 +137,11 @@ h1, h2, h3, h4, h5, h6 {
 p, li, a, .btn, th, tbody, label, div.label, .package-title, .posted_in {
 	font-size:1.3rem!important;
 	line-height: 1.5!important;
+
+p, li, a, .btn, th, tbody, label, div.label, .package-title, .posted_in {
+	font-size:1.3rem;
+	line-height: 1.5;
+
 }
 .pid-text {
 	font-size: 1.5rem;
@@ -145,6 +164,7 @@ td.value, select.form-control, footer p, footer a  {
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
+
 /*Global Link settings*/
 	a {
 		color: var(--color-salvona-primary);
@@ -171,6 +191,10 @@ td.value, select.form-control, footer p, footer a  {
 /*end global link settings*/
 
 /*Responsive elements*/
+
+
+/*mobile elements*/
+
 	@media screen and (min-width: 1200px){
 		.container {
 			max-width: 1200px;
@@ -197,6 +221,7 @@ td.value, select.form-control, footer p, footer a  {
 		border-color: var(--color-salvona-secondary-btn-bg-hover);
 		border-radius: 5px;
 		margin-top: .4em;
+
 		padding: .5rem;
 	}	
 	.btn.btn-primary.buy-now-button {
@@ -228,6 +253,7 @@ td.value, select.form-control, footer p, footer a  {
 # Navigation
 --------------------------------------------------------------*/
 
+
 /*SALVONA LOGO */
 	a.salvona-logo img {
 		max-width: 364px;
@@ -248,6 +274,7 @@ td.value, select.form-control, footer p, footer a  {
 		border: none;
 }
 /*Salvona Search Bar End*/
+
 
 header#masthead { 
 	background-color: #FFF;
@@ -358,6 +385,11 @@ footer {
 	background: url("/~salvona2/images/DotsBackgroundGrey.svg") no-repeat center center scroll;
 	padding-top: 3rem;
 	padding-bottom: 3rem;
+
+footer {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	background: url("/~salvona2/images/DotsBackgroundGrey.svg") no-repeat center center scroll; 
 	background-color: #4a72ae;
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
@@ -374,6 +406,13 @@ footer#colophon .form-inline label, footer#colophon .form-inline input.form-cont
 body:not(.theme-preset-active) footer#colophon {
 	color: #666;
 	
+}
+
+}
+
+
+.social-icons, .footer-thumb, div.col.salvona-logo-thumbnail {
+
 }
 
 footer i {
@@ -394,6 +433,28 @@ footer i {
 
 
 /*--------*/
+
+
+button {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+a:hover,
+a:focus,
+a:active {
+    transform: scale(1.03);
+}
+button:hover,
+button:focus,
+button:active {
+    transform: scale(1.03);
+}
 
 
 
@@ -489,10 +550,36 @@ footer i {
 	border-radius: 10px;
 	margin-bottom:10%;
 	}
-	 
+
+	
+.eventcard {
+	background-color:#ececec;
+	padding-bottom:10%;
+	padding-top:10%;
+	padding-right:7%;
+	padding-left:7%;
+	border-radius: 10px;
+	margin-bottom:10%;
+	}
+
 .eventcard h3 {
 	min-height:105px;
 	}
+
+
+@media only screen and (max-width: 768px) {	
+.eventcard h3 {
+	min-height:150px;
+	}
+	}
+	
+
+
+html {
+	
+	}
+
+
 
 .darkblue i {
 	margin-right:20px;
@@ -556,6 +643,9 @@ footer i {
 
 
 
+html {
+  scroll-behavior: smooth;
+}
 
 
 
@@ -564,14 +654,19 @@ footer i {
 
 
 .homepagemarquee {
+
 	background-color: var(--color-salvona-element-bg);
 	padding-top: 10%;
 	padding-bottom: 10%;
 }
 .homepagemarqueemobile {
+
 	background-color: var(--color-salvona-element-bg);
 	padding-top: 10%;
 	padding-bottom: 10%;
+
+.homepagemarqueemobile img {
+	margin-bottom: 0px;
 }
 .homepagemarquee p, .homepagemarquee h1, .homepagemarquee h2, .homepagemarquee h3,.homepagemarquee h4, .homepagemarquee h5 {
 	color: #ffffff;
@@ -640,16 +735,29 @@ footer i {
 
 
 
+
 @media only screen and (max-width: 800px) {
 .homepagemarquee {
 	background: url("../backgrounds/blank.gif") no-repeat center center scroll; 
 	background-color: var(--color-salvona-element-bg);
+
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
 	}
 	}
+
+
+
+	
+a:hover {
+	color:#4a72ae;
+	}
+a {
+	color:#4a72ae;
+	}
+
 	
 body {
 	font-family: 'Roboto', sans-serif;
@@ -659,7 +767,9 @@ body {
 img {
 	height: auto;
 }
+
 #salvona-homepage img, #salvona-about-page img, .salvona-page img {
+
 	width: 100%;
 	height: auto;
 	margin-bottom: 12px;
@@ -676,6 +786,13 @@ img {
 	}
 
 
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	color: #4a72ae;
+	line-height: 1.1;
+}
+
 
 h1, h2, h3, h4 {
 	margin-top: 5px;
@@ -690,9 +807,11 @@ h5, h6 {
 
 p {
 	font-family: 'Roboto', sans-serif;
+
 	margin-bottom: .5em!important;
 	line-height: 1.6em;
 	margin-top: .5em!important;
+
 }
 ul,ol {
 	font-family: 'Roboto', sans-serif;
@@ -776,6 +895,7 @@ sub, sup {
 }
 .formulationtable tr:first-child td{
 	background-color: var(--color-salvona-element-bg);
+
 	color: #FFF;
 	border: 1px solid #555;
 }
@@ -802,6 +922,7 @@ sub, sup {
 	background-color: #e8e9f3;
 	border: 1px solid #999999;
 		font-weight: 500;
+
 }
 .technicaltable tr:first-child p {
 	color: #FFF;
@@ -825,7 +946,9 @@ sub, sup {
 	width: 100%;
 }
 .versiontable tr:first-child td{
+
 	background-color: var(--color-salvona-element-bg);
+
 	color: #FFF;
 	border: 1px solid #555;
 	font-weight: bold;
@@ -900,6 +1023,7 @@ hr.tighter {
 	}
 }
 		
+
 	/*unsorted from customize*/	
 		
 h3 {
@@ -1156,4 +1280,5 @@ align-items: center;
 padding: .5rem 1rem;
 background-color: #fff!important;
 }
+
 
