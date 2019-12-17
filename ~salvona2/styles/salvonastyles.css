@@ -201,6 +201,14 @@ td.value, select.form-control, footer p, footer a  {
 			max-width: 1200px;
 		}
 	}
+	
+	@media only screen and (max-width: 768px) {	
+.eventcard h3 {
+	min-height:150px;
+	}
+	}
+	
+
 /*end mobile elements*/
 	
 /*salvona buttons*/
@@ -399,6 +407,16 @@ footer {
   	background-size: cover;
 	filter: grayscale(1);
 }
+
+.eventcard {
+	background-color:#ececec;
+	padding-bottom:10%;
+	padding-top:10%;
+	padding-right:7%;
+	padding-left:7%;
+	border-radius: 10px;
+	margin-bottom:10%;
+	}
 
 footer#colophon .form-inline label, footer#colophon .form-inline input.form-control {
 	margin-right: 2rem;
