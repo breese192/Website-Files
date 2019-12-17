@@ -659,7 +659,11 @@ body {
 img {
 	height: auto;
 }
+<<<<<<< Updated upstream:~salvona2/styles/salvonastyles.css
 #salvona-homepage img, #salvona-about-page img, .salvona-page img {
+=======
+#salvona-homepage img, #salvona-about-page img,  #salvona-search-page img, #salvona-distributor-page img {
+>>>>>>> Stashed changes:styles/salvonastyles.css
 	width: 100%;
 	height: auto;
 	margin-bottom: 12px;
@@ -899,6 +903,37 @@ hr.tighter {
     padding-right: 3%;
 	}
 }
+
+
+
+#salvona-distributor-page .card {
+	text-align:center;
+	}
+	
+#salvona-distributor-page .btn-link {
+	color: #0056b3;
+    text-transform: uppercase;
+	font-weight: 600;
+	}
+	
+#salvona-distributor-page .card hr {
+	margin-top: 15%;
+    margin-bottom: 15%;
+    border-top: 1px solid #ddd; 
+	}
+
+#salvona-distributor-page .card h2 {	
+	color: #999999;
+	}
+	
+#salvona-distributor-page .card a {
+	text-decoration: underline;
+	}
+	
+#salvona-distributor-page .card p {
+    margin-bottom: 9%;
+	line-height: 1.7rem;
+	}
 		
 	/*unsorted from customize*/	
 		
