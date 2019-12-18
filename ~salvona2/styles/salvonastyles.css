@@ -394,7 +394,7 @@ input::-webkit-input-placeholder {
 footer {
 	padding-top: 3rem;
 	padding-bottom: 3rem;
-	background: url("/~salvona2/images/DotsBackgroundGrey.svg") no-repeat center center scroll; 
+	background: url("/~salvona2/images/DotsBackgroundGrey.svg") no-repeat center top scroll; 
 	background-color: #4a72ae;
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
