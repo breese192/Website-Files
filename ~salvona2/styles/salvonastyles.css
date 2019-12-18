@@ -390,11 +390,6 @@ input::-webkit-input-placeholder {
 	}
 /*Responsive elements end*/
 
-footer {
-	background: url("/~salvona2/images/DotsBackgroundGrey.svg") no-repeat center center scroll;
-	padding-top: 3rem;
-	padding-bottom: 3rem;
-	}
 	
 footer {
 	padding-top: 3rem;
