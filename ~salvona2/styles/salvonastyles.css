@@ -874,7 +874,7 @@ sub, sup {
 	background: linear-gradient(90deg, rgba(230,237,245,1) 50%, rgba(192,209,229,1) 100%);
 }
 .greydotsbg {
-	background: url(/~salvona2/images/DotsBackgroundGrey.svg) no-repeat center center fixed;
+	background: url("/~salvona2/images/DotsBackgroundGrey.svg") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
