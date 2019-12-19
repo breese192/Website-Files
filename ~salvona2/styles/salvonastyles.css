@@ -212,17 +212,17 @@ td.value, select.form-control, footer p, footer a  {
 /*end mobile elements*/
 	
 /*salvona buttons*/
-	.salvona-btn:hover {
+	.salvona-btn:hover, .checkout-button.button.alt.wc-forward:hover {
 		color: #f1f1f1;
 		background-color: var(--color-salvona-secondary-btn-bg-hover);
 		border-color: var(--color-salvona-secondary-btn-bg);
 		border-radius: 5px;
 	}
-	.salvona-btn:focus , .salvona-btn:active  {
+	.salvona-btn:focus , .salvona-btn:active, .checkout-button.button.alt.wc-forward:active, .checkout-button.button.alt.wc-forward:focus  {
 		filter: opacity(50%);
 		background-color: var(--color-salvona-secondary-btn-bg-hover)!important;
 	}
-	.salvona-btn {
+	.salvona-btn, .checkout-button.button.alt.wc-forward {
 		font-size: 1.2rem;
 		text-decoration:none!important;
 		color:#FFF;
